@@ -1,0 +1,17 @@
+.layouts-category-list {
+  ul {
+    list-style: none;
+
+    li {
+      margin: 5px 0;
+    }
+  }
+
+  ul.parents {
+    margin: 0;
+  }
+
+  ul.children {
+    margin-left: 10px;
+  }
+}
