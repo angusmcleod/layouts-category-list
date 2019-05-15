@@ -7,7 +7,7 @@ export default createWidget('layouts-category-list', {
   buildKey: () => 'layouts-category-list',
 
   defaultState() {
-    const categories = this.site.categories;
+    const categories = this.site.categories.filter(c => !c.isUncategorizedCategory);
     let children = {};
     let parents = [];
 
