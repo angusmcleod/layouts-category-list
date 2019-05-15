@@ -40,7 +40,8 @@ export default createWidget('layouts-category-list', {
         })
       );
       if (category &&
-          category.slug == parent.slug &&
+          (category.slug == parent.slug ||
+          (category.parentCategory && category.parentCategory.slug == parent.slug)) &&
           children[parent.slug]) {
         contents.push(
           h('ul.children',
