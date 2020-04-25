@@ -6,5 +6,8 @@
 register_asset 'stylesheets/layouts-category-list.scss'
 
 DiscourseEvent.on(:layouts_ready) do
-  DiscourseLayouts::WidgetHelper.add_widget('layouts-category-list', position: 'right', order: '1')
+  DiscourseLayouts::Widget.add('layouts-category-list',
+    position: 'right',
+    order: '1'
+  )
 end
